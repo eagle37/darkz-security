@@ -1,3 +1,4 @@
+
 import os
 os.system("pip install git+https://github.com/eagle37/Discord-Games && pip install tasksio && pip install httpx")
 os.system("pip install discord.py[speed] && pip install jishaku && pip install psutil && pip install pynacl")
