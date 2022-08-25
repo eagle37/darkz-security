@@ -22,7 +22,7 @@ async def protect_vanity(guildid):
       with open('vanity.json') as idk:
         code = json.load(idk)
         if code[str(guildid)] != "":
-          header = {"Authorization": "Bot ODUyOTE5NDIzMDE4NTk4NDMw.GoxHP1.xHwxbepouv5-7IJbvyL5Espvi6j_JOMvwMm1mY", "X-Audit-Log-Reason": "Darkz Security | Anti Vanity"}
+          header = {"X-Audit-Log-Reason": "Darkz Security | Anti Vanity"}
           async with aiohttp.ClientSession(headers=header) as session:
             jsonn = {"code": code[str(guildid)]}
             async with session.patch(f"https://ptb.discord.com/api/v10/guilds/{guildid}/vanity-url", json=jsonn) as response:
@@ -47,7 +47,7 @@ async def main():
       await client.load_extension("cogs")
       await client.load_extension("jishaku")
    #   await client.load_extension("pynacl")
-      await client.start("ODUyOTE5NDIzMDE4NTk4NDMw.GoxHP1.xHwxbepouv5-7IJbvyL5Espvi6j_JOMvwMm1mY")
+      await client.start("")
 
 if __name__ == "__main__":
   asyncio.run(main())
